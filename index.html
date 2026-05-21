@@ -1,0 +1,559 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>30 APS | Aerial Port Squadron</title>
+
+  <meta name="description" content="30th Aerial Port Squadron digital hub for photos, schedules, merchandise, and standardized forms." />
+
+  <style>
+
+    :root {
+
+      --bg: #0f172a;
+
+      --card: #111827;
+
+      --muted: #94a3b8;
+
+      --text: #f8fafc;
+
+      --accent: #38bdf8;
+
+      --accent2: #22c55e;
+
+      --danger: #f97316;
+
+      --border: rgba(255,255,255,.12);
+
+    }
+
+    * { box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+
+      margin: 0;
+
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+
+      background: linear-gradient(135deg, #020617, #0f172a 45%, #111827);
+
+      color: var(--text);
+
+      line-height: 1.6;
+
+    }
+
+    a { color: inherit; }
+
+    header {
+
+      padding: 72px 20px 48px;
+
+      text-align: center;
+
+      border-bottom: 1px solid var(--border);
+
+      background: radial-gradient(circle at top, rgba(56,189,248,.18), transparent 42%);
+
+    }
+
+    nav {
+
+      position: sticky;
+
+      top: 0;
+
+      z-index: 10;
+
+      display: flex;
+
+      flex-wrap: wrap;
+
+      justify-content: center;
+
+      gap: 10px;
+
+      padding: 12px;
+
+      background: rgba(2, 6, 23, .86);
+
+      backdrop-filter: blur(12px);
+
+      border-bottom: 1px solid var(--border);
+
+    }
+
+    nav a, button, .button {
+
+      border: 1px solid var(--border);
+
+      border-radius: 999px;
+
+      padding: 10px 16px;
+
+      color: var(--text);
+
+      background: rgba(255,255,255,.06);
+
+      text-decoration: none;
+
+      font-weight: 700;
+
+      cursor: pointer;
+
+    }
+
+    nav a:hover, button:hover, .button:hover { background: rgba(56,189,248,.18); }
+
+    main { max-width: 1100px; margin: auto; padding: 28px 16px 80px; }
+
+    section {
+
+      margin: 28px 0;
+
+      padding: 24px;
+
+      background: rgba(17, 24, 39, .78);
+
+      border: 1px solid var(--border);
+
+      border-radius: 24px;
+
+      box-shadow: 0 20px 60px rgba(0,0,0,.22);
+
+    }
+
+    h1 { margin: 0; font-size: clamp(2.4rem, 8vw, 5rem); letter-spacing: -.05em; }
+
+    h2 { margin-top: 0; font-size: clamp(1.6rem, 4vw, 2.4rem); }
+
+    .lead { max-width: 800px; margin: 16px auto 0; color: #dbeafe; font-size: 1.1rem; }
+
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 16px; }
+
+    .card {
+
+      padding: 18px;
+
+      border: 1px solid var(--border);
+
+      border-radius: 18px;
+
+      background: rgba(255,255,255,.05);
+
+    }
+
+    .muted { color: var(--muted); }
+
+    .badge { display: inline-block; color: #052e16; background: #86efac; padding: 4px 10px; border-radius: 999px; font-weight: 800; font-size: .8rem; }
+
+    .photo-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: 12px; }
+
+    .photo {
+
+      min-height: 150px;
+
+      border-radius: 18px;
+
+      border: 1px dashed var(--border);
+
+      display: grid;
+
+      place-items: center;
+
+      color: var(--muted);
+
+      background: linear-gradient(135deg, rgba(56,189,248,.12), rgba(34,197,94,.10));
+
+      text-align: center;
+
+      padding: 12px;
+
+    }
+
+    form { display: grid; gap: 12px; }
+
+    label { font-weight: 800; }
+
+    input, select, textarea {
+
+      width: 100%;
+
+      border: 1px solid var(--border);
+
+      border-radius: 14px;
+
+      padding: 12px;
+
+      background: rgba(2,6,23,.7);
+
+      color: var(--text);
+
+      font: inherit;
+
+    }
+
+    textarea { min-height: 110px; }
+
+    .notice {
+
+      border-left: 4px solid var(--danger);
+
+      padding: 12px 14px;
+
+      background: rgba(249,115,22,.10);
+
+      border-radius: 12px;
+
+      color: #ffedd5;
+
+    }
+
+    footer { text-align: center; color: var(--muted); padding: 32px 16px; }
+
+  </style>
+
+</head>
+
+<body>
+
+  <nav>
+
+    <a href="#home">Home</a>
+
+    <a href="#photos">Photos</a>
+
+    <a href="#schedule">Schedule</a>
+
+    <a href="#merch">Merch</a>
+
+    <a href="#forms">Forms</a>
+
+    <a href="#contact">Contact</a>
+
+  </nav>
+
+  <header id="home">
+
+    <span class="badge">USAFR Port Dawgs</span>
+
+    <h1>30 APS</h1>
+
+    <p class="lead">Digital hub for the 30th Aerial Port Squadron: photos, scheduling, merchandise, standardized forms, and squadron knowledge sharing in support of rapid global mobility missions.</p>
+
+  </header>
+
+  <main>
+
+    <section>
+
+      <h2>Mission Hub</h2>
+
+      <div class="grid">
+
+        <div class="card"><strong>Photos</strong><p class="muted">Share approved squadron photos and event galleries.</p></div>
+
+        <div class="card"><strong>Scheduling</strong><p class="muted">Display events from Supabase free tier.</p></div>
+
+        <div class="card"><strong>Merchandise</strong><p class="muted">Link to approved squadron merch stores.</p></div>
+
+        <div class="card"><strong>PDF Forms</strong><p class="muted">Generate standardized PDFs from web forms.</p></div>
+
+      </div>
+
+    </section>
+
+    <section id="photos">
+
+      <h2>Photo Gallery</h2>
+
+      <p class="muted">Replace these placeholders with approved photos in a repo folder like <code>/photos</code>.</p>
+
+      <div class="photo-grid">
+
+        <div class="photo">Upload photo:<br>photos/cargo-ops.jpg</div>
+
+        <div class="photo">Upload photo:<br>photos/passenger-processing.jpg</div>
+
+        <div class="photo">Upload photo:<br>photos/training.jpg</div>
+
+        <div class="photo">Upload photo:<br>photos/squadron.jpg</div>
+
+      </div>
+
+    </section>
+
+    <section id="schedule">
+
+      <h2>Schedule</h2>
+
+      <p class="muted">This section can pull from Supabase. Until configured, sample events are shown.</p>
+
+      <div id="events" class="grid"></div>
+
+    </section>
+
+    <section id="merch">
+
+      <h2>Merchandise</h2>
+
+      <p class="muted">Start by linking to an outside store. Do not build payments yourself yet.</p>
+
+      <div class="grid">
+
+        <a class="card" href="https://www.printful.com/" target="_blank" rel="noreferrer"><strong>Squadron Shirts</strong><p class="muted">Replace with your actual store link.</p></a>
+
+        <a class="card" href="https://www.etsy.com/" target="_blank" rel="noreferrer"><strong>Coins / Patches</strong><p class="muted">Replace with your approved merch link.</p></a>
+
+        <a class="card" href="https://squareup.com/" target="_blank" rel="noreferrer"><strong>Square Store</strong><p class="muted">Simple option for unit fundraiser items.</p></a>
+
+      </div>
+
+    </section>
+
+    <section id="forms">
+
+      <h2>Standardized PDF Form</h2>
+
+      <div class="notice">Static GitHub Pages cannot securely email attachments by itself. This starter generates the completed PDF for download. For automatic email, add EmailJS, Resend, SendGrid, Supabase Edge Functions, or Cloudflare Workers later.</div>
+
+      <form id="pdfForm">
+
+        <label>Form Type
+
+          <select id="formType">
+
+            <option>Training Request</option>
+
+            <option>Event Signup</option>
+
+            <option>Photo Submission</option>
+
+            <option>General Request</option>
+
+          </select>
+
+        </label>
+
+        <label>Full Name <input id="fullName" required placeholder="Rank / Name" /></label>
+
+        <label>Email <input id="email" type="email" required placeholder="name@example.com" /></label>
+
+        <label>Phone <input id="phone" placeholder="Optional" /></label>
+
+        <label>Details <textarea id="details" required placeholder="Enter request details"></textarea></label>
+
+        <label>Route To
+
+          <select id="routeTo">
+
+            <option value="30aps.forms@example.com">Forms Inbox</option>
+
+            <option value="30aps.training@example.com">Training</option>
+
+            <option value="30aps.photos@example.com">Photos</option>
+
+            <option value="30aps.merch@example.com">Merchandise</option>
+
+          </select>
+
+        </label>
+
+        <button type="submit">Generate Completed PDF</button>
+
+      </form>
+
+      <p id="formStatus" class="muted"></p>
+
+    </section>
+
+    <section id="contact">
+
+      <h2>Contact</h2>
+
+      <p class="muted">Replace these placeholder emails with approved addresses.</p>
+
+      <div class="grid">
+
+        <div class="card"><strong>Forms</strong><p>30aps.forms@example.com</p></div>
+
+        <div class="card"><strong>Photos</strong><p>30aps.photos@example.com</p></div>
+
+        <div class="card"><strong>Training</strong><p>30aps.training@example.com</p></div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+  <footer>
+
+    <p>30 APS digital hub. Do not upload classified, sensitive, PII, FOUO/CUI, or non-public operational information.</p>
+
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/jspdf@2.5.1/dist/jspdf.umd.min.js"></script>
+
+  <script>
+
+    // ====== SUPABASE CONFIG ======
+
+    // Create a Supabase project, then replace these two values.
+
+    // Use only the public anon key here. Never paste secret/service-role keys into GitHub Pages.
+
+    const SUPABASE_URL = "";
+
+    const SUPABASE_ANON_KEY = "";
+
+    const sampleEvents = [
+
+      { title: "UTA Weekend", event_date: "TBD", location: "Niagara Falls ARS", details: "Monthly drill weekend placeholder." },
+
+      { title: "Aerial Port Training", event_date: "TBD", location: "Squadron", details: "Cargo, passenger, and ramp training." },
+
+      { title: "Volunteer / Morale Event", event_date: "TBD", location: "TBD", details: "Add approved event details here." }
+
+    ];
+
+    async function loadEvents() {
+
+      const container = document.getElementById("events");
+
+      let events = sampleEvents;
+
+      if (SUPABASE_URL && SUPABASE_ANON_KEY) {
+
+        try {
+
+          const supabase = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+
+          const { data, error } = await supabase
+
+            .from("events")
+
+            .select("title,event_date,location,details")
+
+            .order("event_date", { ascending: true });
+
+          if (error) throw error;
+
+          if (data && data.length) events = data;
+
+        } catch (err) {
+
+          console.warn("Supabase unavailable, using sample events", err);
+
+        }
+
+      }
+
+      container.innerHTML = events.map(event => `
+
+        <div class="card">
+
+          <strong>${escapeHtml(event.title || "Event")}</strong>
+
+          <p><b>Date:</b> ${escapeHtml(event.event_date || "TBD")}</p>
+
+          <p><b>Location:</b> ${escapeHtml(event.location || "TBD")}</p>
+
+          <p class="muted">${escapeHtml(event.details || "")}</p>
+
+        </div>
+
+      `).join("");
+
+    }
+
+    function escapeHtml(value) {
+
+      return String(value).replace(/[&<>'"]/g, char => ({
+
+        "&": "&amp;", "<": "&lt;", ">": "&gt;", "'": "&#39;", '"': "&quot;"
+
+      }[char]));
+
+    }
+
+    document.getElementById("pdfForm").addEventListener("submit", event => {
+
+      event.preventDefault();
+
+      const { jsPDF } = window.jspdf;
+
+      const doc = new jsPDF();
+
+      const formType = document.getElementById("formType").value;
+
+      const fullName = document.getElementById("fullName").value;
+
+      const email = document.getElementById("email").value;
+
+      const phone = document.getElementById("phone").value;
+
+      const details = document.getElementById("details").value;
+
+      const routeTo = document.getElementById("routeTo").value;
+
+      const today = new Date().toLocaleString();
+
+      doc.setFont("helvetica", "bold");
+
+      doc.setFontSize(18);
+
+      doc.text("30 APS Standardized Form", 20, 20);
+
+      doc.setFontSize(12);
+
+      doc.setFont("helvetica", "normal");
+
+      doc.text(`Form Type: ${formType}`, 20, 36);
+
+      doc.text(`Submitted: ${today}`, 20, 44);
+
+      doc.text(`Route To: ${routeTo}`, 20, 52);
+
+      doc.text(`Name: ${fullName}`, 20, 68);
+
+      doc.text(`Email: ${email}`, 20, 76);
+
+      doc.text(`Phone: ${phone || "N/A"}`, 20, 84);
+
+      doc.setFont("helvetica", "bold");
+
+      doc.text("Details:", 20, 100);
+
+      doc.setFont("helvetica", "normal");
+
+      doc.text(doc.splitTextToSize(details, 170), 20, 110);
+
+      doc.save(`30APS-${formType.replaceAll(" ", "-")}-${Date.now()}.pdf`);
+
+      const subject = encodeURIComponent(`30 APS ${formType} - ${fullName}`);
+
+      const body = encodeURIComponent("A completed PDF was generated from 30aps.com. Please attach the downloaded PDF to this email before sending.");
+
+      document.getElementById("formStatus").innerHTML = `PDF generated. <a href="mailto:${routeTo}?subject=${subject}&body=${body}">Open email to ${routeTo}</a> and attach the downloaded PDF.`;
+
+    });
+
+    loadEvents();
+
+  </script>
+
+</body>
+
+</html>
